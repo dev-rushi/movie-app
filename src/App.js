@@ -25,7 +25,7 @@ function App() {
 
   async function fetchMovies() {
 
-    const result = await axios('http://localhost:5500/getMovies');
+    const result = await axios('https://movie-backend-app2.herokuapp.com/getMovies');
     setmovies(result.data)
 
   }
@@ -36,7 +36,7 @@ function App() {
   async function deleteMovie(e) {
 
     var movieId = e.target.getAttribute('data-id');
-    const url = `http://localhost:5500/delete?id=${movieId}`
+    const url = `https://movie-backend-app2.herokuapp.com/delete?id=${movieId}`
     await axios.put(url)
       .then(res => {
         alert(res.data);
@@ -77,7 +77,15 @@ function App() {
 
                       <div class="card-control">
                         <button class="delete" data-id={item._id} onClick={deleteMovie}>Delete</button>
-                        <button class="edit">Edit</button>
+
+                        <Link
+                          to={{
+                            pathname: '/update',
+                            search: "?id=" + item._id
+
+                          }}
+                        ><button class="edit">Edit</button></Link>
+
                       </div>
                     </div>
                   </div>
@@ -95,8 +103,8 @@ function App() {
         <Route exact path='/update'>
           <Update />
         </Route>
-      </Switch>
-    </Router>
+      </Switch >
+    </Router >
 
 
 

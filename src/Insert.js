@@ -27,7 +27,7 @@ const Insert = (props) => {
 
 
 
-        axios.post('http://localhost:5500/insert', movie)
+        axios.post('https://movie-backend-app2.herokuapp.com/insert', movie)
             .then(res => {
                 alert(res.data);
                 window.location.reload()
@@ -67,7 +67,7 @@ const Insert = (props) => {
 
             <div class="thumbnail-img-wrapper">
                 <h1>{file ? file : "No thubnail uploaded"}</h1>
-                {imageUrl ? <img alt="no image" class="thumbnail-img" src={imageUrl} /> : ""}
+                {imageUrl ? <img alt="no preview" class="thumbnail-img" src={imageUrl} /> : ""}
             </div>
             <form className="movie-form" onSubmit={insertData}>
 
