@@ -198,13 +198,13 @@ input[type="date"]{
 
 .thumbnail-img-wrapper{
   width: 100%;
-  
+  padding:1rem;
 }
 
 .thumbnail-img{
   
   object-fit: cover;
-  width : 95%;
+  width : 70%;
   height : 2700px;
   margin-left: 200px;
    
@@ -237,11 +237,11 @@ input[type="date"]{
 
     .movie-card{
       width: 100%;
-      padding-left: 6rem;
+       
       
     }
     .img-wrapper{
-      flex-basis: 98%;
+      flex-basis: 100%;
       flex-shrink: 0;
       flex-grow: 1;
     }
