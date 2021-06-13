@@ -258,4 +258,8 @@ input[type="date"]{
     .thumbnail-img{
       margin: none;
     }
+  
+   .movie-thumbnail{
+     
+     width : 100%;
 }
