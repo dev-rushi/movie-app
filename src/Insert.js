@@ -24,12 +24,14 @@ const Insert = (props) => {
         movie.collections = e.target[5].value;
 
         setMovie(movie)
-        console.log(movie);
 
 
 
         axios.post('http://localhost:5500/insert', movie)
-            .then(result => console.log(result))
+            .then(res => {
+                alert(res.data);
+                window.location.reload()
+            })
 
 
     }
