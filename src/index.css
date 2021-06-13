@@ -255,11 +255,9 @@ input[type="date"]{
 
         width: 98%;
     }
-    .thumbnail-img{
-      margin: none;
-    }
-  
+     
    .movie-thumbnail{
      
      width : 100%;
+  }
 }
