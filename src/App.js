@@ -54,7 +54,7 @@ function App() {
 
         <Route exact path="/">
           <div class="movie-container">
-            {movies.length == 0 ? <h1>No movies</h1> :
+            {movies.length === 0 ? <h1>No movies</h1> :
 
               movies.map(item => {
 

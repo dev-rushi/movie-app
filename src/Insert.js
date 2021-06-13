@@ -10,7 +10,7 @@ const Insert = (props) => {
 
     const [file, setfile] = useState();
     const [imageUrl, setImageUrl] = useState();
-    const [movie, setMovie] = useState();
+    const [mov, setMovie] = useState();
     const insertData = (e) => {
 
 
@@ -27,7 +27,7 @@ const Insert = (props) => {
 
 
 
-        axios.post('https://movie-backend-app2.herokuapp.com/insert', movie)
+        axios.post('https://movie-backend-app2.herokuapp.com/insert', mov)
             .then(res => {
                 alert(res.data);
                 window.location.reload()

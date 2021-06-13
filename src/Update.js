@@ -13,7 +13,7 @@ const Update = () => {
     const [imageurl, setImageUrl] = useState(null);
     useEffect(() => {
         loadId(id);
-    }, [])
+    }, [id])
 
     async function loadId(id) {
 
