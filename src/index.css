@@ -7,7 +7,255 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+}
+
+.navbar{
+
+  background-color: #000;
+  padding: 2rem;
+}
+
+
+.navbar ul{
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+
+.navbar ul li{
+
+  font-size: 2.4em;
+  list-style-type: none;
+
+}
+
+.navbar ul li a:any-link
+{
+
+  color : #fff ;
+  text-decoration: none;
+  
+
+}
+
+.navbar ul li a:hover{
+
+  color : gray ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.movie-container{
+ 
+  padding-top: 1em;
+
+}
+
+
+.movie-card{
+
+  background-color: whitesmoke;
+  padding: 1em;
+  display: flex;
+  width: 70%;
+  margin: auto;
+  flex-wrap: wrap;
+  box-shadow: 4px 4px 5px grey;
+  margin-bottom: 3rem;
+
+}
+
+.img-wrapper{
+
+flex-basis: 40%;
+
+
+}
+
+.img-wrapper img{
+
+  object-fit: cover;
+  width: 360px;
+  height: 250px;
+  
+}
+ 
+
+.movie-information{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3rem;
+  height: 100%;
+  
+}
+
+
+.movie-name{
+  font-size: 2.4rem;
+}
+.movie-language{
+
+  justify-self:flex-end;
+  background-color: tomato;
+  padding: 5px;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.movie-releaseDate{
+  
+  font-size: 1.4rem;
+
+}
+.movie-budget{
+  font-size: 1.4rem;
+}
+.movie-collection
+{
+  font-size: 1.4rem;
+}
+
+
+.movie-form-wrapper{
+
+  padding: 1rem;
+  width: 100%;
+}
+
+.movie-form{
+
+   
+  width: 50%;
+  margin: auto;
+  display: flex;
+  margin-top: 4rem;
+  flex-direction: column;
+
+}
+
+label{
+  display: block;
+  font-size:1.8rem; 
+}
+.form-grp{
+  
+  font-size: 2.6rem;
+}
+
+input[type="text"],
+input[type="date"]{
+
+  font-weight: bold;
+  width: 70%;
+  padding: 3px;
+  height: 4rem;
+}
+
+
+
+#submitButton{
+
+    padding: .5rem;
+    font-size: 1.6rem;
+    width: 30%;
+    margin-top: 5px;
+}
+
+
+#submitButton:hover,
+#submitButton:focus{
+
+  cursor: pointer;
+  outline: none;
+
+}
+
+
+
+
+
+.thumbnail-img-wrapper{
+  width: 100%;
+  
+}
+
+.thumbnail-img{
+  
+  object-fit: cover;
+  width: 360px;
+  height: 250px;
+margin-left: 200px;
+   
+}
+
+
+
+.card-control{
+
+
+  padding: .5rem;
+}
+
+.delete,.edit{
+  background:none;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 800;
+  border:   green solid 3px;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+.delete:hover,.delete:focus,.edit:hover,.edit:focus{
+  cursor : pointer;
+  background-color:  green;
+  color:white;
+}
+@media screen and (min-width: 480px) and (max-width: 600px) {
+
+    .movie-card{
+      width: 100%;
+      padding-left: 6rem;
+      
+    }
+    .img-wrapper{
+      flex-basis: 98%;
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+
+
+    .movie-form{
+      width: 100%;
+    }
+    input[type="text"],
+    input[type="date"]
+    {
+
+        width: 98%;
+    }
+    .thumbnail-img{
+      margin: none;
+    }
 }
