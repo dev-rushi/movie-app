@@ -241,9 +241,8 @@ input[type="date"]{
       
     }
     .img-wrapper{
-      flex-basis: 100%;
-      flex-shrink: 0;
-      flex-grow: 1;
+      
+       width : 100%;
     }
 
 
